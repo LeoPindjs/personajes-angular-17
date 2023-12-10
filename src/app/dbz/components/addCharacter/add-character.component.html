@@ -1,0 +1,63 @@
+<section class="
+  rounded-lg |
+  mb-4">
+
+  <h2 class="
+    capitalize  |
+    mb-6        |
+    text-center |
+    sm:text-sm  |
+    md:text-xl ">
+    formulario de búsqueda de personajes
+  </h2>
+
+  <form (ngSubmit)="emitCharacter()" class="flex |
+    flex-col |
+    place-items-center">
+
+    <input class="
+      capitalize          |
+      text-center         |
+      sm:text-xs          |
+      md:text-base        |
+      px-4 | py-1         |
+      border-orange-500 |
+      w-72                |
+      mb-4                |
+      rounded-md          |
+      sm:w-auto" type="text" [(ngModel)]="character.name" name="name" placeholder="Ingresa héroe" />
+
+    <input class="
+      text-center      |
+      sm:text-xs       |
+      md:text-base     |
+      px-4             |
+      py-1             |
+   b  order-orange-500 |
+      w-72             |
+      mb-4             |
+      rounded-md       |
+      sm:w-auto" type="number" [(ngModel)]="character.power" name="power" placeholder="Ingresa poder del héroe" min="0"
+      max="10000" />
+
+    <button class="
+      block           |
+      bg-orange-500 |
+      text-white    |
+      px-4            |
+      py-1            |
+      rounded-1xl     |
+      mb-3            |
+      border-none     |
+      rounded-md      |
+      w-72">
+      Agregar Héroe
+    </button>
+
+  </form>
+
+  <!-- <pre class="bg-slate-300 p-2">
+    {{ character | json }}
+  </pre> -->
+
+</section>

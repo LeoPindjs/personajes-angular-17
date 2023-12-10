@@ -1,0 +1,57 @@
+<section class="rounded-lg">
+
+  <h2 class="
+   capitalize   |
+    text-center |
+    sm:text-sm  |
+    md:text-xl  |
+    mb-4">
+    listado de personajes
+  </h2>
+
+  <ul class="flex | flex-col">
+
+    <li class="
+      capitalize           |
+      my-3                 |
+      py-2                 |
+      flex                 |
+      justify-evenly       |
+      hover:bg-zinc-950  |
+      rounded-md           |
+      transition-all" *ngFor="let character of characterList;
+      index as i;odd as isOdd" [ngClass]="{'bg-zinc-900':isOdd }">
+
+      <div class="
+        flex               |
+        justify-between    |
+        items-center       |
+        md:gap-6           |
+        p-2">
+
+        <span>{{i+1}} - {{ character.name }}</span>
+
+        <span class=" text-gray-400 |  text-xs ">poder: {{ character.power }} unidades</span>
+
+        <button class="
+        capitalize            |
+        text-orange-20        |
+        bg-orange-500       |
+        rounded-md            |
+        max-w-max             |
+        text-wrap-['balance'] |
+        sm:text-sm            |
+        px-2                  |
+        border-none           |
+        md:text-base" (click)="onDeleteCharacter(character.id!)">
+          eliminar
+        </button>
+
+      </div>
+
+
+    </li>
+
+  </ul>
+
+</section>
